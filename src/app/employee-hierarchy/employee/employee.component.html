@@ -1,0 +1,6 @@
+<ul>
+<li [innerHtml]='employee?.name'></li>
+<div *ngFor="let child of employee?.employees">
+  <app-employee [employee]="child"></app-employee>
+</div>
+</ul>

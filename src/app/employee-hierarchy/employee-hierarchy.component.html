@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h4><a href="/process-employee-hierarchy">Process Employees Hierarchy</a></h4>
+</div>
+
+<div class="panel" [ngClass]='resultClass' [hidden]='!(error || result)'>
+  <div class="panel-heading">
+    <h4 class="panel-title">Result</h4>
+  </div>
+  <div [hidden]='!error' class="panel-body">
+    {{ error }}
+  </div>
+  <div [hidden]='!result' class="panel-body">
+    <app-employee [employee]='result'></app-employee>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">Enter input payload</h4>
+  </div>
+  <div class="panel-body">
+    <div class="alert alert-danger" role="alert" [hidden]='!processAttempted || payload'>Input payload cannot be empty</div>
+    <div class="input-group">
+      <textarea class="form-control custom-control" rows="10" style="resize:none" [(ngModel)]="payload" id="payload"></textarea>
+      <span class="input-group-addon btn btn-primary" (click)="process()">Send</span>
+    </div>
+  </div>
+</div>
+

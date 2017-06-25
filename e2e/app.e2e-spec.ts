@@ -1,14 +1,20 @@
-import { EmployeeHierarchyClientPage } from './app.po';
+import { AppClientPage } from './app.po';
 
 describe('employee-hierarchy-client App', () => {
-  let page: EmployeeHierarchyClientPage;
+  let page: AppClientPage;
 
   beforeEach(() => {
-    page = new EmployeeHierarchyClientPage();
+    page = new AppClientPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display app header message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getHeaderText()).toEqual('Employee Hierarchy App');
   });
+
+  it('should display process url', () => {
+    page.navigateTo();
+    expect(page.getProcessUrlText()).toEqual('Process Employees Hierarchy');
+  });
+
 });

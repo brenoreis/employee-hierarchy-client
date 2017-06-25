@@ -2,18 +2,18 @@
   <h4><a href="/process-employee-hierarchy">Process Employees Hierarchy</a></h4>
 </div>
 
-<div class="panel" [ngClass]='resultClass' [hidden]='!(error || result)'>
+<div id="result" class="panel" [ngClass]='resultClass' [hidden]='!(error || result)'>
   <div class="panel-heading">
     <h4 class="panel-title">Result</h4>
   </div>
-  <div [hidden]='!error' class="panel-body">
+  <div [hidden]='!error' class="panel-body" id="error">
     {{ error }}
   </div>
-  <div [hidden]='!result' class="panel-body">
+  <div [hidden]='!result' class="panel-body" id="result-list">
     <app-employee [employee]='result'></app-employee>
   </div>
 </div>
-<div class="panel panel-default">
+<div id="input" class="panel panel-default">
   <div class="panel-heading">
     <h4 class="panel-title">Enter input payload</h4>
   </div>

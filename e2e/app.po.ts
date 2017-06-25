@@ -1,11 +1,15 @@
 import { browser, by, element } from 'protractor';
 
-export class EmployeeHierarchyClientPage {
+export class AppClientPage {
   navigateTo() {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getHeaderText() {
+    return element(by.css('h3')).getText();
+  }
+
+  getProcessUrlText() {
+    return element(by.css('h4')).element(by.css('a')).getText();
   }
 }

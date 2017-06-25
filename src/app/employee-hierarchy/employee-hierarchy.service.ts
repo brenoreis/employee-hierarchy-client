@@ -16,7 +16,7 @@ export class EmployeeHierarchyService {
       .map((res: Response) => res.json());
   }
 
-private getUrl() {
+  private getUrl() {
     return SERVICE_URL;
   }
 

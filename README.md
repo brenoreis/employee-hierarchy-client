@@ -5,8 +5,8 @@ Start the back end application.
 Clone the repository.
 
 Run:
-- npm install
-- ng serve
+ - npm install
+ - ng serve
 
 Open in your browser http://localhost:4200
 
@@ -18,4 +18,7 @@ Jamie;150;
 Alex;275;100  
 Steve;400;150  
 David;190;400  
+
+Run protractor tests (make sure the backend app is running)
+ - ng e2e 
 
